@@ -1,22 +1,26 @@
 <div class="card card-outline-secondary my-4">
   <div class="card-header">
-    Categories list
+    Posts list
   </div>
   <div class="card-body">
     <table class="table table-bordered table-orange">
       <thead class="thead-light">
       <tr>
         <th>ID</th>
-        <th>Name</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Enabled</th>
         <th>Created at</th>
         <th>Actions</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let c of categories">
-        <td>{{ c.id }}</td>
-        <td>{{ c.name }}</td>
-        <td>{{ c.createdAt.date|date:'short' }}</td>
+      <tr>
+        <td>id</td>
+        <td>title</td>
+        <td>category</td>
+        <td>enabled</td>
+        <td>12/10/2018</td>
         <td>
           <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
           <button class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o"></i></button>

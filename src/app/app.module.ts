@@ -10,9 +10,15 @@ import {SidebarComponent} from './shared/layout/sidebar/sidebar.component';
 import {IndexComponent} from './admin/categories/index/index.component';
 
 import { CategoryService } from "./services/categories/category.service";
+import { AddComponent } from './admin/categories/add/add.component';
+import { ArticleIndexComponent } from './admin/articles/article-index/article-index.component';
+
 
 const appRoutes: Routes = [
-    {path: '', component: IndexComponent}
+    {path: 'admin/categories', component: IndexComponent},
+    {path: 'admin/articles', component: ArticleIndexComponent}
+
+
 ];
 
 @NgModule({
@@ -21,7 +27,9 @@ const appRoutes: Routes = [
         FooterComponent,
         HeaderComponent,
         SidebarComponent,
-        IndexComponent
+        IndexComponent,
+        AddComponent,
+        ArticleIndexComponent
     ],
     imports: [
         BrowserModule,
