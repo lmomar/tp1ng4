@@ -15,12 +15,12 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>id</td>
-        <td>title</td>
-        <td>category</td>
-        <td>enabled</td>
-        <td>12/10/2018</td>
+      <tr *ngFor="let p of posts">
+        <td>{{ p.id }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.category.name }}</td>
+        <td>{{ p.enabled }}</td>
+        <td>{{ p.createdAt.date|date:'short'}}</td>
         <td>
           <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
           <button class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o"></i></button>

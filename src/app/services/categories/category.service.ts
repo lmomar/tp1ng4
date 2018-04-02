@@ -16,4 +16,14 @@ export class CategoryService {
         ;
   }
 
+  getCategories(page):Observable<Category[]>
+  {
+      return this.http.get(this.api + '/categories/' + page)
+          .map(
+              (response: Response) => {
+                  return <Category[]> response.json();
+              }
+          );
+  }
+
 }

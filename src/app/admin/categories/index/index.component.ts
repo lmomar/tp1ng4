@@ -21,9 +21,11 @@ export class IndexComponent implements OnInit {
 
     getCategories(page = 1): void {
         this.catService.categoriesList(page)
-            .subscribe((data) => {
+            .subscribe(
+                (data) => {
                     this.categories = data.json()['categories']
-                }
+                },
+                (error) => console.log('error::',error)
             )
     }
 
